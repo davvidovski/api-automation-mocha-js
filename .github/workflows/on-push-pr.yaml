@@ -22,7 +22,9 @@ jobs:
           node-version: 'latest' # Use the latest Node.js version
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          chmod +x ./node_modules/.bin/mocha  # Ensure mocha has execute permission
 
       - name: Run all tests
         run: npm run test
