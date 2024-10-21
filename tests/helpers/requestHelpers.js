@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from '../../../config/apiConfig.js';
+import config from '../../config/apiConfig.js';
 
 const requestHelper = {
   // Create user (POST)

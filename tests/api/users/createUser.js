@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import requestHelper from '../helpers/requestHelpers.js';
+import requestHelper from '../../helpers/requestHelpers.js';
 import { validUser } from '../../../data/userData.js';
 
 // Define reusable function to validate the response

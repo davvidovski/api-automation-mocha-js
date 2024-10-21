@@ -14,7 +14,14 @@ export const existingUser = {
   first_name: "Janet",
   last_name: "Weaver",
   avatar: "https://reqres.in/img/faces/2-image.jpg",
-  job: "Engineer", 
+};
+
+export const existingUser2 = {
+  id: 3,
+  email: 'emma.wong@reqres.in',
+  first_name: 'Emma',
+  last_name: 'Wong',
+  avatar: 'https://reqres.in/img/faces/3-image.jpg',
 };
 
 export const updateUser = {
