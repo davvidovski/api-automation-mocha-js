@@ -1,0 +1,17 @@
+{
+  "name": "api-automation-mocha-js",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "mocha tests/**/*.js",                     
+    "test:createUser": "mocha tests/api/users/createUser.js",
+    "test:getUser": "mocha tests/api/users/getUser.js",
+    "test:updateUser": "mocha tests/api/users/updateUser.js",
+    "test:deleteUser": "mocha tests/api/users/deleteUser.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "chai": "^4.3.6",
+    "mocha": "^10.2.0"
+  }
+}

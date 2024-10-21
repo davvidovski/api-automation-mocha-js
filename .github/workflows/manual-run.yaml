@@ -1,0 +1,56 @@
+name: Manual API Test Runner
+
+on:
+  workflow_dispatch:
+    inputs:
+      script-name:
+        description: 'Name of the test script to run'
+        required: true
+        type: choice
+        options:
+          - all
+          - createUser
+          - getUser
+          - updateUser
+          - deleteUser
+        default: 'all'
+
+jobs:
+  node_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'latest' # Use the latest Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run selected tests
+        run: |
+          case "${{ github.event.inputs['script-name'] }}" in
+            all)
+              npm run test
+              ;;
+            createUser)
+              npm run test:createUser
+              ;;
+            getUser)
+              npm run test:getUser
+              ;;
+            updateUser)
+              npm run test:updateUser
+              ;;
+            deleteUser)
+              npm run test:deleteUser
+              ;;
+            *)
+              echo "Invalid selection"
+              exit 1
+              ;;
+          esac
