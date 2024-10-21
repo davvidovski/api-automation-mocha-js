@@ -6,7 +6,6 @@ describe('Get User API Test', () => {
     it('should fetch the created user by ID and validate all details', async () => {
         try {
             const response = await requestHelper.get('/users/2');  // Use the helper to make the GET request
-            console.log('GET Response:', response.data);  // Debugging log
 
             const user = response.data.data;  // Access the user data
 

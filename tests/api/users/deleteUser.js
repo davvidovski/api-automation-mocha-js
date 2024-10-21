@@ -1,18 +1,15 @@
 import { expect } from 'chai';
 import requestHelper from '../helpers/requestHelpers.js';
+import { validUser } from '../../../data/userData.js';
 
 describe('Delete User API Test', function() {
   let userId;
 
   before(async function() {
     // First, create the user
-    const postResponse = await requestHelper.post('/users', {
-      name: 'John Doe',
-      job: 'Engineer',
-    });
+    const res = await requestHelper.post('/users', validUser);
 
-    userId = postResponse.data.id; // Get the ID of the created user
-    console.log(`User created with ID: ${userId}`);
+    userId = res.data.id; // Get the ID of the created user
   });
 
   it('should delete a user by ID', async function() {

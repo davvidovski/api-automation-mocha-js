@@ -6,9 +6,6 @@ describe('Update User API Test', function() {
   it('should update user details', async function() {
     const res = await requestHelper.put('/api/users/2', updateUser);
 
-    // Log the full response to inspect the structure
-    console.log(res);
-
     // Check the status code is 200
     expect(res.status).to.equal(200);
 
