@@ -1,4 +1,4 @@
-name: WebDriverIO Scheduled CI
+name: On Schedule API Test Runner
 
 # Trigger the workflow on a schedule (every Friday at 5am and on the last day of the month)
 on:
@@ -6,7 +6,7 @@ on:
     # Runs every Friday at 5:00 AM UTC
     - cron: '0 5 * * 5'
     # Runs on the last day of every month at 5:00 AM UTC
-    - cron: '0 5 28-31 * *'
+    - cron: '0 5 28-31 * *'  # This triggers on the last day of each month
 
 jobs:
   test:
@@ -15,7 +15,7 @@ jobs:
     steps:
     
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # Use v3 instead of v2 for better support
 
     - name: Set up Node.js
       uses: actions/setup-node@v3

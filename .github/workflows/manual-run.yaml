@@ -33,7 +33,7 @@ jobs:
 
       - name: Run selected tests
         run: |
-          case "${{ github.event.inputs['script-name'] }}" in
+          case "${{ github.event.inputs.script-name }}" in
             all)
               npm run test
               ;;
@@ -50,7 +50,7 @@ jobs:
               npm run test:deleteUser
               ;;
             *)
-              echo "Invalid selection"
+              echo "Invalid selection: ${{ github.event.inputs.script-name }}"
               exit 1
               ;;
           esac
