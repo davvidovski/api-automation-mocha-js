@@ -4,6 +4,7 @@ This project is an API automation framework built with JavaScript, using Mocha a
 
 ## Table of Contents
 
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Scripts](#scripts)
@@ -11,6 +12,15 @@ This project is an API automation framework built with JavaScript, using Mocha a
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
 - [License](#license)
+
+---
+
+## Requirements
+
+Before you start, ensure that you have the following installed:
+
+- Node.js (version 16 or above)
+- npm (Node Package Manager)
 
 ## Installation
 
